@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  </head>
+  <body>
+      <a-assets>
+        <a-asset-item id="bude" src="Bude1.gltf">
+      </a-assets>
+
+
+    <a-scene>
+    
+      <a-gltf-model src="#bude" scale="0.001 0.001 0.001" rotation="-90 -90 0" position="-3.5 0 0"></a-gltf-model>
+      <a-gltf-model src="#bude" scale="0.001 0.001 0.001" rotation="-90 90 0" position="3.5 0 -3.05"></a-gltf-model>
+
+      <a-entity geometry="primitive: box; width: 2.2; height: 0.03; depth: 0.5" position="0 0.8 -1.5" material="color:#D0A0A0"></a-entity>
+      <a-entity geometry="primitive: box; width: 0.05; height: 0.8; depth: 0.4" position="-0.6 0.4 -1.5" material="color:#000000"></a-entity>
+      <a-entity geometry="primitive: box; width: 0.05; height: 0.8; depth: 0.4" position="0.6 0.4 -1.5" material="color:#000000"></a-entity>
+      
+
+      <a-sky color="#6C6CFF"></a-sky>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="10" height="10" color="#7BFFA4"></a-plane>
+
+
+      <a-entity light="intensity: 0.6; color: #BBB; type: ambient" ></a-entity>
+      <a-entity light="intensity: 0.6; castShadow: true" position="-0.5 2.68725 1"></a-entity>
+      
+      <a-entity camera look-controls wasd-controls="fly:true;" position="0 1.6 1"></a-entity>
+    </a-scene>
+  </body>
+</html>
